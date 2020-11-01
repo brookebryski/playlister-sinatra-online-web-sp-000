@@ -1,9 +1,11 @@
-require 'sinatra/base'
+begin
 require 'rack-flash'
+end
 
 class SongsController < ApplicationController
+  enable :sessions
   use Rack::Flash
-  
+
   get '/songs' do
     @songs = Song.all
     erb :"songs/index"
@@ -74,4 +76,6 @@ class SongsController < ApplicationController
     @song = Song.find_by_slug(slug)
     erb :"songs/edit"
   end
+# 
+
 end
