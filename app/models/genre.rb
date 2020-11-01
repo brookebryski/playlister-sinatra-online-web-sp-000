@@ -1,5 +1,5 @@
 
-class Artist < ActiveRecord::Base
+class Genre < ActiveRecord::Base
     has_many :song_genres
     has_many :songs, through: 
     has_many :artists, through: :songs
