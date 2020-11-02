@@ -1,6 +1,6 @@
-begin
+
 require 'rack-flash'
-end
+
 
 class SongsController < ApplicationController
   enable :sessions
